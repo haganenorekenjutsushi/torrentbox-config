@@ -13,9 +13,9 @@
 		"parity_disks": ["/media/Parity1"],
 		"data_disks" :[
 			"/media/Odin", 
-	    	"/media/Thor",
-	    	"/media/Loki",
-	    	"/media/Sif",
+			"/media/Thor",
+			"/media/Loki",
+			"/media/Sif",
 			"/media/Baldi",
 			"/media/Ran"
 		],
