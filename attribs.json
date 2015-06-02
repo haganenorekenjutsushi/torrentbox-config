@@ -1,0 +1,120 @@
+{
+	"run_list": [
+	  "recipe[torrentbox]",
+	  "recipe[snapraid]",
+	  "recipe[snapraid::scheduler]",
+	  "recipe[chef-client::default]"
+	],
+	"samba": {
+        "hosts_allow": "0.0.0.0/0",
+        "interfaces": "0.0.0.0/0"
+    },
+	"snapraid": {
+		"parity_disks": ["/media/Parity1"],
+		"data_disks" :[
+			"/media/Odin", 
+	    	"/media/Thor",
+	    	"/media/Loki",
+	    	"/media/Sif",
+			"/media/Baldi",
+			"/media/Ran"
+		],
+		"content_files" :[
+			"/media/Odin", 
+	    	"/media/Thor",
+	    	"/media/Loki",
+	    	"/media/Sif",
+			"/media/Baldi",
+			"/media/Ran"
+		],
+		"exclude_list" :[
+			"*.bak",
+			"*.unrecoverable",
+			"/tmp/",
+			"/lost+found/",
+			".AppleDouble",
+			"._AppleDouble",
+			".DS_Store",
+			".Thumbs.db",
+			".fseventsd",
+			".Spotlight-V100",
+			".TemporaryItems",
+			".Trashes",
+			".AppleDB",
+			"snapraid.content",
+			"/Temp/",
+			"/Everything Else/Backup/config-backups"
+		]
+	},
+	"torrentbox": {
+		"disks": [
+			{
+				"device" : "cb92d746-cb71-491e-8f3a-86eef42ce878",
+				"device_type": "uuid",
+				"fstype" : "ext4",
+				"path" : "/media/Parity1",
+				"options" : "defaults"
+			},
+			{
+				"device" : "5496842B96840FA2",
+				"device_type" : "uuid",
+				"fstype" : "ntfs-3g",
+				"path" : "/media/Odin",
+				"options" : "defaults,windows_names,locale=en_GB.utf8"
+			},
+			{
+				"device" : "4EE24A0AE249F72D",
+				"device_type" : "uuid",
+				"fstype" : "ntfs-3g",
+				"path" : "/media/Thor",
+				"options" : "defaults,windows_names,locale=en_GB.utf8"
+			},
+			{
+				"device" : "6AF2D1B8F2D18929",
+				"device_type" : "uuid",
+				"fstype" : "ntfs-3g",
+				"path" : "/media/Loki",
+				"options" : "defaults,windows_names,locale=en_GB.utf8"
+			},
+			{
+				"device" : "EC38CD0938CCD42C",
+				"device_type" : "uuid",
+				"fstype" : "ntfs-3g",
+				"path" : "/media/Sif",
+				"options" : "defaults,windows_names,locale=en_GB.utf8"
+			},
+			{
+				"device" : "2E0CBD160CBCDA53",
+				"device_type" : "uuid",
+				"fstype" : "ntfs-3g",
+				"path" : "/media/Baldi",
+				"options" : "defaults,windows_names,locale=en_GB.utf8"
+			},
+			{
+				"device" : "130F02B87C6185B0",
+				"device_type" : "uuid",
+				"fstype" : "ntfs-3g",
+				"path" : "/media/Ran",
+				"options" : "defaults,windows_names,locale=en_GB.utf8"
+			}
+		],
+		"mhddfs": {
+		    "source_disks": [
+		    	"/media/Odin", 
+		    	"/media/Thor",
+		    	"/media/Loki",
+		    	"/media/Sif",
+				"/media/Baldi",
+				"/media/Ran"
+		    ],
+		    "mount_point": "/mnt/virtual"
+	  	},
+	  	"directories": {
+		    "tv_downloads" : "/mnt/virtual/Everything Else/Torrents/Torrent Files/TV",
+		    "movie_downloads" : "/mnt/virtual/Everything Else/Torrents/Torrent Files/Movies",
+		    "incomplete_downloads" : "/mnt/virtual/Everything Else/Torrents/Incomplete",
+		    "tv" : "/mnt/virtual/TV",
+		    "movies" : "/mnt/virtual/Movies"
+		  }
+	}
+}

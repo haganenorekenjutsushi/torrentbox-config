@@ -1,0 +1,14 @@
+{
+  "id": "shares",
+  "shares": {
+    "data": {
+      "comment": "Data",
+      "path": "/mnt/virtual",
+      "guest ok": "yes",
+      "printable": "no",
+      "write list": ["DownloadManager"],
+      "create mask": "0664",
+      "directory mask": "0775"
+    }
+  }
+}
