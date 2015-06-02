@@ -43,7 +43,9 @@
 			".AppleDB",
 			"snapraid.content",
 			"/Temp/",
-			"/Everything Else/Backup/config-backups"
+			"/Everything Else/Backup/config-backups",
+			"/mnt/virtual/Everything Else/Torrents",
+			".spacereserve"
 		]
 	},
 	"torrentbox": {
