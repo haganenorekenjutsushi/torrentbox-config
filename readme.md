@@ -1,6 +1,8 @@
 # torrentbox example config
-This example config demonstrates the necessary config to use the torrentbox cookbook
-you will need to:  
+This example config demonstrates the necessary config to use the [torrentbox cookbook](https://github.com/haganenorekenjutsushi/torrentbox)  
+The steps below assume a blank installation of Ubuntu 14.04
+
+## Usage
 
 1. Install Chef using wget to download and dpkg -i  to install the .deb file  
 2. Package from berks on your computer with chef-dk installed using "berks package"
