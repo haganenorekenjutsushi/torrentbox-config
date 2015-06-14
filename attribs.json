@@ -20,7 +20,11 @@
 			"/media/Ran"
 		],
 		"content_files" :[
-			"/etc/snapraid",
+			"/media/Odin", 
+			"/media/Thor",
+			"/media/Loki",
+			"/media/Sif",
+			"/media/Baldi",
 			"/media/Ran"
 		],
 		"exclude_list" :[
